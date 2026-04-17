@@ -822,7 +822,6 @@ class TestCertificateClient(KeyVaultTestCase):
         assert not returned_uri_policy.san_dns_names
         assert not returned_uri_policy.san_ip_addresses
         await client.delete_certificate(uri_cert_name)
-        await client.close()
 
     @pytest.mark.asyncio
     @pytest.mark.parametrize("api_version", only_latest)
